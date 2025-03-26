@@ -97,4 +97,28 @@
         });
     });
 
+    const toggleAccordion = document.getElementById('toggleAccordion');
+    const accordionContent = document.getElementById('accordionContent');
+    const episodeContent = document.getElementById('episodeContent');
+    const accordionToggles = document.querySelectorAll('.accordion-toggle');
+
+    // Toggle the entire accordion visibility
+    toggleAccordion.addEventListener('click', () => {
+        if (accordionContent.style.display === 'none') {
+            accordionContent.style.display = 'block';
+            toggleAccordion.textContent = 'Hide Transcripts';
+        } else {
+            accordionContent.style.display = 'none';
+            toggleAccordion.textContent = 'Show Transcripts';
+        }
+    });
+
+    // Update the <pre> content when an episode button is clicked
+    accordionToggles.forEach((toggle) => {
+        toggle.addEventListener('click', () => {
+            const episodeText = toggle.getAttribute('data-episode');
+            episodeContent.textContent = episodeText;
+        });
+    });
+
 })(jQuery);
