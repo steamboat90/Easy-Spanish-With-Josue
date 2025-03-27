@@ -12,6 +12,28 @@
 
 (function($) {
 
+    // Store episode content in a mapping
+    const episodeContents = {
+        "episode0": 
+`Hello everyone, and welcome to Easy Spanish with Josue. The purpose of this podcast is to give you an opportunity to practice your Spanish listening comprehension with slow, easy, and beginner-friendly Spanish. 
+
+Each episode is accompanied by a transcript so you can follow along as I speak. If you don’t understand a certain word, you should pause the playback, learn the definition, and return. This is the best way to expand your vocabulary and enhance your listening skills. I also recommend returning to episodes you have already listened to until you can understand them fully. 
+
+Thank you for joining me! ¡Hasta luego!`,
+
+        "episode1": 
+`Hola a todos y bienvenidos al primer episodio de “Easy Spanish with Josue.” I recommend you read along as I am speaking. If you would like to, you can access the transcript in the show notes. If you would like to support the podcast, you can buy me a coffee with the link in the shownotes En este podcast, vas a poder practicar y aumentar tus habilidades de escuchar y entender en español. Voy a hablar de varias cosas en español muy simples para que te entiendas. Gracias por estar aquí conmigo. 
+
+Ok, vamos a empezar con el primer episodio. En este episodio, voy a hablar del tema de los trabajos. Muchas personas tienen trabajos. Y todos tienen trabajos distintos. En nuestras sociedades hay posiciones como doctor, abogado, limpiador, ingeniero, entre muchos otros. En muchos trabajos, los trabajadores tienen que trabajar entre las horas de nueve de la mañana y cinco de la tarde. 
+
+Si eres estudiante, ¿cuáles trabajos te gustan? Si estás trabajando, ¿qué trabajo tienes?
+
+Hemos llegado al fin del episodio. Gracias por tu tiempo y gracias por estar aquí conmigo. Remember, if you would like to, you can access the transcript in the show notes. If you would like to support the podcast, you can buy me a coffee with the link in the shownotes. Hasta luego!`,
+
+        "episode2": `Episode 2 dives into common Spanish verbs
+    and how to use them in everyday sentences.`
+    };
+
     // Show current year
     $("#current-year").text(new Date().getFullYear());
 
@@ -19,7 +41,7 @@
     $('html').removeClass('no-js');
 
     // Animate to section when nav is clicked
-    $('header a').click(function(e) {
+    $('header .scroll').click(function(e) {
 
         // Treat as normal link if no-scroll class
         if ($(this).hasClass('no-scroll')) return;
@@ -113,11 +135,17 @@
         }
     });
 
+    
     // Update the <pre> content when an episode button is clicked
     accordionToggles.forEach((toggle) => {
         toggle.addEventListener('click', () => {
-            const episodeText = toggle.getAttribute('data-episode');
-            episodeContent.textContent = episodeText;
+            const episodeKey = toggle.getAttribute('data-episode-key'); // Get the episode key
+            const content = episodeContents[episodeKey]; // Get the content from the mapping
+            if (content) {
+                episodeContent.textContent = content; // Set the content of the <pre> element
+            } else {
+                episodeContent.textContent = 'Episode content not found.';
+            }
         });
     });
 
