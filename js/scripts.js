@@ -12,6 +12,10 @@
 
 (function($) {
 
+    /* ---------EPISODE TEMPLATE
+    "episode2": ``,
+    --------- */
+
     // Store episode content in a mapping
     const episodeContents = {
         "episode0": 
@@ -30,8 +34,52 @@ Si eres estudiante, ¿cuáles trabajos te gustan? Si estás trabajando, ¿qué t
 
 Hemos llegado al fin del episodio. Gracias por tu tiempo y gracias por estar aquí conmigo. Remember, if you would like to, you can access the transcript in the show notes. If you would like to support the podcast, you can buy me a coffee with the link in the shownotes. Hasta luego!`,
 
-        "episode2": `Episode 2 dives into common Spanish verbs
-    and how to use them in everyday sentences.`
+        "episode2": `
+Hola a todos y bienvenidos al segundo episodio de “Easy Spanish with Josue.” I recommend you read along as I am speaking. If you would like to, you can access the transcript in the show notes. If you would like to support the podcast, you can buy me a coffee with the link in the show notes.
+
+Ok, vamos a empezar con el episodio de hoy. Hoy, voy a hablar del tema de la ropa. Todos usamos ropa. Usamos ropa para trabajar, para descansar, para hacer ejercicios y para dormir. Cada persona tiene un estilo diferente.
+
+Por ejemplo, en el verano, muchas personas usan ropa ligera. Usan camisetas, pantalones cortos, vestidos, sandalias o gafas de sol. Hace calor, así que queremos ropa cómoda.
+
+En invierno, usamos ropa más abrigada. Usamos suéteres, chaquetas, pantalones largos, bufandas, guantes y botas. Hace frío, así que necesitamos ropa que nos dé calor.
+
+También, muchas personas tienen ropa especial para el trabajo. Por ejemplo, un médico puede usar un uniforme blanco. Un abogado puede usar un traje formal. Un chef usa una chaqueta blanca y un gorro especial. Y muchas personas que trabajan en oficinas usan camisas, pantalones de vestir o faldas.
+
+A veces, usamos ropa elegante para ocasiones especiales como bodas o fiestas. Y otras veces, usamos ropa deportiva para correr, hacer yoga o ir al gimnasio. Mi ropa favorita es cómoda. Me gusta usar camisetas y jeans.
+
+¿Y tú? ¿Qué tipo de ropa te gusta usar? ¿Tienes una prenda favorita?
+
+Hemos llegado al fin del episodio. Gracias por tu tiempo y gracias por estar aquí conmigo.
+
+Remember, if you would like to, you can access the transcript in the show notes. If you would like to support the podcast, you can buy me a coffee with the link in the show notes.
+
+¡Hasta luego!
+`,
+        "episode3": `
+Hola a todos y bienvenidos al tercer episodio de “Easy Spanish with Josue.” I recommend you read along as I am speaking. If you would like to, you can access the transcript in the show notes. If you would like to support the podcast, you can buy me a coffee with the link in the show notes.
+
+Ok, vamos a empezar con el episodio de hoy. Hoy voy a hablar de la comida.
+
+Comemos todos los días. Comemos por la mañana, por la tarde y por la noche. En la mañana, muchas personas comen el desayuno. El desayuno puede incluir pan, huevos, café, jugo, leche, frutas o cereal.
+
+Al mediodía, muchas personas almuerzan. El almuerzo es una comida más grande. Puede incluir arroz, pollo, ensalada, sopa, carne o pescado.
+
+Por la noche, comemos la cena. La cena puede ser ligera o grande, depende de la persona. Algunas personas comen una sopa, un sándwich o solo una fruta.
+
+También, muchas personas comen algo pequeño entre comidas. Esto se llama una merienda o un snack. Puede ser una galleta, una barra de granola, yogur o fruta.
+
+Cada país tiene su comida típica. Por ejemplo, en México se comen tacos, enchiladas y tamales. En España, se come paella y tortilla de patatas. En Argentina, se come mucha carne y empanadas.
+
+A mí me gustan mucho las sopaipillas de Chile, la fruta fresca y el pan con mantequilla.
+
+¿Y a ti? ¿Cuál es tu comida favorita? ¿Te gusta cocinar o prefieres comer fuera?
+
+Hemos llegado al fin del episodio. Gracias por tu tiempo y gracias por estar aquí conmigo.
+
+Remember, if you would like to, you can access the transcript in the show notes. If you would like to support the podcast, you can buy me a coffee with the link in the show notes.
+
+¡Hasta luego!
+`,
     };
 
     // Show current year
